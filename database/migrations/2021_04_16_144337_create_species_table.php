@@ -14,7 +14,16 @@ class CreateSpeciesTable extends Migration
     public function up()
     {
         Schema::create('species', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('name');
+            $table->string('classification');
+            $table->string('designation');
+            $table->integer('average_height');
+            $table->string('skin_colors');
+            $table->string('hair_colors');
+            $table->string('eye_colors');
+            $table->integer('average_lifespan');
+            $table->string('language');
             $table->timestamps();
         });
     }

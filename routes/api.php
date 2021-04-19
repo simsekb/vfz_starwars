@@ -24,6 +24,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //people related routes
 Route::get('people', [PeopleController::class, 'getAllPeople']);
 Route::get('people/{id}', [PeopleController::class, 'getPeopleById']);
+Route::get('people/conf/sync', [PeopleController::class, 'syncAPIPeopleWithDb']);
 //planets related routes
 Route::get('planets', [PlanetsController::class, 'getAllPlanets']);
 Route::get('planets/{id}', [PlanetsController::class, 'getPlanetById']);

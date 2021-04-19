@@ -1,6 +1,10 @@
 <template>
     <div id="home">
-        <span class="bg">Test?</span>
+        <div class="info-container">
+            <span>Info goes here</span>
+            <span>Info goes here</span>
+            <span>Info goes here</span>
+        </div>
     </div>
 </template>
 
@@ -11,7 +15,14 @@
 </script>
 
 <style scoped>
-    .bg {
-        background-color: black;
+    #home {
+        background-color: brown;
+        width: 100vw;
+        height: 100vh;
+    }
+    .info-container {
+        display:flex;
+        flex-direction: column;
+        padding: 20px;
     }
 </style>

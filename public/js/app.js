@@ -1874,6 +1874,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "home"
 });
@@ -1956,7 +1960,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.bg[data-v-f2b6376c] {\n    background-color: black;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#home[data-v-f2b6376c] {\n    background-color: brown;\n    width: 100vw;\n    height: 100vh;\n}\n.info-container[data-v-f2b6376c] {\n    display:flex;\n    flex-direction: column;\n    padding: 20px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -19670,7 +19674,13 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { attrs: { id: "home" } }, [
-      _c("span", { staticClass: "bg" }, [_vm._v("Test?")])
+      _c("div", { staticClass: "info-container" }, [
+        _c("span", [_vm._v("Info goes here")]),
+        _vm._v(" "),
+        _c("span", [_vm._v("Info goes here")]),
+        _vm._v(" "),
+        _c("span", [_vm._v("Info goes here")])
+      ])
     ])
   }
 ]
