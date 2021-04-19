@@ -18,12 +18,14 @@ class CreateSpeciesTable extends Migration
             $table->string('name')->nullable();
             $table->string('classification')->nullable();
             $table->string('designation')->nullable();
-            $table->integer('average_height')->nullable();
+            $table->string('average_height')->nullable();
             $table->string('skin_colors')->nullable();
             $table->string('hair_colors')->nullable();
             $table->string('eye_colors')->nullable();
-            $table->integer('average_lifespan')->nullable();
+            $table->string('average_lifespan')->nullable();
+            $table->string('planet_id')->nullable();
             $table->string('language')->nullable();
+            $table->json('people_ids')->nullable();
             $table->timestamps();
         });
     }

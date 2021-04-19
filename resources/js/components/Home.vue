@@ -24,5 +24,11 @@
         display:flex;
         flex-direction: column;
         padding: 20px;
+        background-color: burlywood;
+        border-radius: 10px;
+        width: 400px;
+        height: 400px;
+        justify-content: center;
+        text-align: center;
     }
 </style>

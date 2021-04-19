@@ -22,8 +22,7 @@ class PlanetsController extends Controller
     public function getPlanetById($id) {
         return Http::get('https://swapi.dev/api/planets/' . $id)->json();
     }
-
-        /*
+    /*
      * syncs the existing API with the DB
      */
     public function syncAPIPeopleWithDb() {
