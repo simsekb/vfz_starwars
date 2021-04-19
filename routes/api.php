@@ -28,6 +28,7 @@ Route::get('people/conf/sync', [PeopleController::class, 'syncAPIPeopleWithDb'])
 //planets related routes
 Route::get('planets', [PlanetsController::class, 'getAllPlanets']);
 Route::get('planets/{id}', [PlanetsController::class, 'getPlanetById']);
+Route::get('planets/conf/sync', [PlanetsController::class, 'syncAPIPeopleWithDb']);
 //species related routes
 Route::get('species', [SpeciesController::class, 'getAllSpecies']);
 Route::get('species/{id}', [SpeciesController::class, 'getSpeciesById']);

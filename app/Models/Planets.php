@@ -9,6 +9,10 @@ class Planets extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name', 'rotation_period', 'orbital_period', 'diameter', 'climate', 'gravity', 'terrain', 'surface_water', 'population', 'residents_ids'
+    ];
+
     public function people() {
         return $this->belongsToMany(People::class);
     }

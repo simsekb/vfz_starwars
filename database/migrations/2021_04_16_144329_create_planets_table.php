@@ -15,15 +15,16 @@ class CreatePlanetsTable extends Migration
     {
         Schema::create('planets', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->integer('rotation_period');
-            $table->integer('orbital_period');
-            $table->integer('diameter');
-            $table->string('climate');
-            $table->string('gravity');
-            $table->string('terrain');
-            $table->integer('surface_water');
-            $table->integer('population');
+            $table->string('name')->nullable();
+            $table->string('rotation_period')->nullable();
+            $table->string('orbital_period')->nullable();
+            $table->string('diameter')->nullable();
+            $table->string('climate')->nullable();
+            $table->string('gravity')->nullable();
+            $table->string('terrain')->nullable();
+            $table->string('surface_water')->nullable();
+            $table->string('population')->nullable();
+            $table->json('residents_ids')->nullable();
             $table->timestamps();
          });
     }
