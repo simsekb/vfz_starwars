@@ -71,8 +71,9 @@
     }
     textarea {
         border-radius: 10px;
-        height: 320px;
-        width: 360px;
+        height: 100%;
+        width: 100%;
         background-color: burlywood;
+        resize: none;
     }
 </style>

@@ -26,6 +26,10 @@ class PeopleController extends Controller
      * syncs the existing API with the DB
      */
     public function syncAPIPeopleWithDb() {
+        //check if the db is already synced, if yes, don't fill it again (kept simplistic)
+        if(People::all()->count() > 0) {
+            return;
+        }
         $requestResponse = Http::get('https://swapi.dev/api/people');
 
         //let's loop through the response we've gotten

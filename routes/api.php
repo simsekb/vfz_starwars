@@ -28,8 +28,8 @@ Route::get('people/conf/sync', [PeopleController::class, 'syncAPIPeopleWithDb'])
 //planets related routes
 Route::get('planets', [PlanetsController::class, 'getAllPlanets']);
 Route::get('planets/{id}', [PlanetsController::class, 'getPlanetById']);
-Route::get('planets/conf/sync', [PlanetsController::class, 'syncAPIPeopleWithDb']);
+Route::get('planets/conf/sync', [PlanetsController::class, 'syncAPIPlanetsWithDb']);
 //species related routes
 Route::get('species', [SpeciesController::class, 'getAllSpecies']);
 Route::get('species/{id}', [SpeciesController::class, 'getSpeciesById']);
-Route::get('species/conf/sync', [SpeciesController::class, 'syncAPIPeopleWithDb']);
+Route::get('species/conf/sync', [SpeciesController::class, 'syncAPISpeciesWithDb']);
