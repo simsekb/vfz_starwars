@@ -14,13 +14,13 @@ class PeopleController extends Controller
      */
     public function getAllPeople()
     {
-        return Http::get('https://swapi.dev/api/people')->json();
+        return People::all();
     }
     /* 
      * get all people by id
      */
     public function getPeopleById($id) {
-        return Http::get('https://swapi.dev/api/people/' . $id)->json();
+        return People::where('id', '=', $id);
     }
     /*
      * syncs the existing API with the DB

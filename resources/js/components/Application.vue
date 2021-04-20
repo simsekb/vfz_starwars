@@ -11,4 +11,7 @@
 </script>
 
 <style>
+    #application {
+        background-color: brown;
+    }
 </style>

@@ -14,13 +14,13 @@ class SpeciesController extends Controller
      */
     public function getAllSpecies()
     {
-        return Http::get('https://swapi.dev/api/species')->json();
+        return Species::all();
     }
     /* 
      * get species by id
      */
     public function getSpeciesById($id) {
-        return Http::get('https://swapi.dev/api/species/' . $id)->json();
+        return Species::where('id', '=', $id);
     }
     /*
      * syncs the existing API with the DB

@@ -14,13 +14,13 @@ class PlanetsController extends Controller
      */
     public function getAllPlanets()
     {
-        return Http::get('https://swapi.dev/api/planets')->json();
+        return Planets::all();
     }
     /* 
      * get planet by id
      */
     public function getPlanetById($id) {
-        return Http::get('https://swapi.dev/api/planets/' . $id)->json();
+        return Planets::where('id', '=', $id)->get();
     }
     /*
      * syncs the existing API with the DB
