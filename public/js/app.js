@@ -1888,6 +1888,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Home",
   data: function data() {
@@ -1919,9 +1924,6 @@ __webpack_require__.r(__webpack_exports__);
         _this3.species = JSON.stringify(response.data, undefined, 4);
       });
     }
-  },
-  mounted: function mounted() {
-    this.people = '';
   }
 });
 
@@ -2027,7 +2029,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#home[data-v-f2b6376c] {\n    width: 100vw;\n    height: 100vh;\n    display: flex;\n    justify-content: center;\n}\n.info-container[data-v-f2b6376c] {\n    display:flex;\n    flex-direction: column;\n    padding: 20px;\n    background-color: burlywood;\n    border-radius: 10px;\n    width: 400px;\n    height: auto;\n    text-align: center;\n    margin: 20px;\n}\ntextarea[data-v-f2b6376c] {\n    border-radius: 10px;\n    height: 100%;\n    width: 100%;\n    background-color: burlywood;\n    resize: none;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#home[data-v-f2b6376c] {\n}\n.info-holder[data-v-f2b6376c] {\n    width: 100vw;\n    height: 100vh;\n    display: flex;\n    justify-content: center;\n    margin-top: 30px;\n}\n.info-container[data-v-f2b6376c] {\n    display:flex;\n    flex-direction: column;\n    padding: 20px;\n    background-color: burlywood;\n    border-radius: 10px;\n    width: 400px;\n    height: auto;\n    text-align: center;\n    margin: 20px;\n}\n.logo-container[data-v-f2b6376c] {\n    width: 100vw;\n    height: 200px;\n    background-image: url('https://amsterdamdatascience.nl/wp-content/uploads/2020/01/Logo-VodafoneZiggo@2x.png?x22826');\n    background-repeat: no-repeat;\n    background-size: 600px;\n    background-position: center top 50px; /* Center the image */\n}\ntextarea[data-v-f2b6376c] {\n    border-radius: 10px;\n    height: 100%;\n    width: 100%;\n    background-color: burlywood;\n    resize: none;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -19753,95 +19755,99 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "home" } }, [
-    _c(
-      "div",
-      { staticClass: "info-container", on: { click: _vm.LoadPeople } },
-      [
-        _c("h1", [_vm._v("People")]),
-        _vm._v(" "),
-        _c("h2", [_vm._v("Just press me!")]),
-        _vm._v(" "),
-        _c("textarea", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.people,
-              expression: "people"
-            }
-          ],
-          domProps: { value: _vm.people },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.people = $event.target.value
-            }
-          }
-        })
-      ]
-    ),
+    _c("div", { staticClass: "logo-container" }),
     _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "info-container", on: { click: _vm.LoadPlanets } },
-      [
-        _c("h1", [_vm._v("Planets")]),
-        _vm._v(" "),
-        _c("h2", [_vm._v("Just press me!")]),
-        _vm._v(" "),
-        _c("textarea", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.planets,
-              expression: "planets"
-            }
-          ],
-          domProps: { value: _vm.planets },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+    _c("div", { staticClass: "info-holder" }, [
+      _c(
+        "div",
+        { staticClass: "info-container", on: { click: _vm.LoadPeople } },
+        [
+          _c("h1", [_vm._v("People")]),
+          _vm._v(" "),
+          _c("h2", [_vm._v("Just press me!")]),
+          _vm._v(" "),
+          _c("textarea", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.people,
+                expression: "people"
               }
-              _vm.planets = $event.target.value
-            }
-          }
-        })
-      ]
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "info-container", on: { click: _vm.LoadSpecies } },
-      [
-        _c("h1", [_vm._v("Species")]),
-        _vm._v(" "),
-        _c("h2", [_vm._v("Just press me!")]),
-        _vm._v(" "),
-        _c("textarea", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.species,
-              expression: "species"
-            }
-          ],
-          domProps: { value: _vm.species },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+            ],
+            domProps: { value: _vm.people },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.people = $event.target.value
               }
-              _vm.species = $event.target.value
             }
-          }
-        })
-      ]
-    )
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "info-container", on: { click: _vm.LoadPlanets } },
+        [
+          _c("h1", [_vm._v("Planets")]),
+          _vm._v(" "),
+          _c("h2", [_vm._v("Just press me!")]),
+          _vm._v(" "),
+          _c("textarea", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.planets,
+                expression: "planets"
+              }
+            ],
+            domProps: { value: _vm.planets },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.planets = $event.target.value
+              }
+            }
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "info-container", on: { click: _vm.LoadSpecies } },
+        [
+          _c("h1", [_vm._v("Species")]),
+          _vm._v(" "),
+          _c("h2", [_vm._v("Just press me!")]),
+          _vm._v(" "),
+          _c("textarea", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.species,
+                expression: "species"
+              }
+            ],
+            domProps: { value: _vm.species },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.species = $event.target.value
+              }
+            }
+          })
+        ]
+      )
+    ])
   ])
 }
 var staticRenderFns = []
